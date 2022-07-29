@@ -16,52 +16,54 @@ const data = [
 
 const Articles = () => {
   return (
-    <Box sx={{
-      my: "6rem",
-      mx: { md: '7rem', sm: '3rem', xs: 'auto' }
-    }}>
-      <Typography variant='h3' sx={{
-        textAlign: { xs: 'center', sm: 'left' }
-      }} >
-        Latest Articles
-      </Typography>
+    <section>
       <Box sx={{
-        display: 'flex',
-        justifyContent: { sm: 'space-between', xs: 'center' },
-        flexDirection: { sm: 'row', xs: 'column' },
-        alignContent: 'center',
-        width: '100%',
-        mt: '3rem',
+        my: "6rem",
+        mx: { md: '7rem', sm: '3rem', xs: 'auto' }
       }}>
-        {data.map(({ image, author, title, description }, i) => {
-          return (
-            <Card sx={{
-              maxWidth: { xs: '90%', sm: '23%' },
-              mx: { xs: 'auto', sm: 0 }
-            }}
-              elevation={0} key={i} >
-              <CardMedia
-                component="img"
-                image={image}
-                alt="green iguana"
-                sx={{ height: 190 }}
-              />
-              <CardContent>
-                <Typography variant='caption'>
-                  By {author}
-                </Typography>
-                <Typography my={1} variant="h6">
-                  {title}
-                </Typography>
-                <Typography variant="subtitle1" >
-                  {description}
-                </Typography>
-              </CardContent>
-            </Card>
-          )
-        })}
+        <Typography variant='h3' sx={{
+          textAlign: { xs: 'center', sm: 'left' }
+        }} >
+          Latest Articles
+        </Typography>
+        <Box sx={{
+          display: 'flex',
+          justifyContent: { sm: 'space-between', xs: 'center' },
+          flexDirection: { sm: 'row', xs: 'column' },
+          alignContent: 'center',
+          width: '100%',
+          mt: '3rem',
+        }}>
+          {data.map(({ image, author, title, description }, i) => {
+            return (
+              <Card sx={{
+                maxWidth: { xs: '90%', sm: '23%' },
+                mx: { xs: 'auto', sm: 0 }
+              }}
+                elevation={0} key={i} >
+                <CardMedia
+                  component="img"
+                  image={image}
+                  alt="green iguana"
+                  sx={{ height: 190 }}
+                />
+                <CardContent>
+                  <Typography variant='caption'>
+                    By {author}
+                  </Typography>
+                  <Typography my={1} variant="h6">
+                    {title}
+                  </Typography>
+                  <Typography variant="subtitle1" >
+                    {description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            )
+          })}
+        </Box>
       </Box>
-    </Box>
+    </section>
   )
 }
 

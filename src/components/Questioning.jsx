@@ -1,7 +1,6 @@
-import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
 import React from 'react'
-import { Colors } from '../styles/theme'
-
+import { Avatar, ListItemAvatar, ListItemText, Typography } from '@mui/material'
+import { InfoList, InfoListItem, QuestionBox } from '../styles/questioning'
 import iconApi from '../assets/icon-api.svg'
 import iconBudgeting from '../assets/icon-budgeting.svg'
 import iconOnboarding from '../assets/icon-onboarding.svg'
@@ -18,61 +17,36 @@ const data = [
 
 const Questioning = () => {
   return (
+    <section>
+      <QuestionBox >
+        <Typography variant='h3'>Why choose Easybank?</Typography>
+        <Typography variant='body2' sx={{ mt: '1rem' }}>
+          we leverage Open Banking to turn bank account into your financial hub.<br />
+          Control your finances never before
+        </Typography>
 
-    <Box sx={{
-      zIndex: 2,
-      position: 'relative',
-      backgroundColor: Colors.LightGrayishBlue,
-      p: { md: '7rem', xs: '3rem' },
-      
-      textAlign: { xs: "center", sm: "start" },
-
-    }}  >
-
-      <Typography variant='h3'>Why choose Easybank?</Typography>
-      <Typography variant='body2' sx={{ mt: '1rem' }}>
-        we leverage Open Banking to turn bank account into your financial hub.<br />
-        Control your finances never before
-      </Typography>
-
-      <List sx={{
-        width: '100%',
-        display: "flex",
-        justifyContent: "center",
-        flexDirection: { xs: "column", sm: 'row' },
-        alignItems: { xs: 'center', sm: 'baseline' },
-
-      }}>
-        {data.map(({ icon, header, description }, i) => {
-          return (
-            <ListItem key={i} sx={{
-              flexDirection: 'column',
-              width: '20rem',
-              mt: '2.5rem',
-              alignItems: { xs: "center", sm: 'flex-start' },
-              textAlign: { xs: 'center', sm: 'left' }
-            }}>
-              <ListItemAvatar sx={{ transform: 'scale(1.7)', ml: '0.7rem' }} >
-                <Avatar alt={header} src={icon} />
-              </ListItemAvatar>
-              <ListItemText
-                primary={
-                  <Typography variant='h5' sx={{ mt: '1.5rem', textTransform: 'capitalize' }}>
+        <InfoList>
+          {data.map(({ icon, header, description }, i) => {
+            return (
+              <InfoListItem key={i}>
+                <ListItemAvatar sx={{ transform: 'scale(1.7)', ml: '0.7rem' }} >
+                  <Avatar alt={header} src={icon} />
+                </ListItemAvatar>
+                <ListItemText
+                  primary={<Typography variant='h5' sx={{ mt: '1.5rem', textTransform: 'capitalize' }}>
                     {header}
-                  </Typography>
-                }
-                secondary={
-                  <Typography sx={{ mt: '0.7rem' }} variant="subtitle2">
+                  </Typography>}
+                  secondary={<Typography sx={{ mt: '0.7rem' }} variant="subtitle2">
                     {description}
-                  </Typography>
-                }
-              />
-            </ListItem>
-          )
-        })}
-      </List>
+                  </Typography>}
+                />
+              </InfoListItem>
+            )
+          })}
+        </InfoList>
 
-    </Box>
+      </QuestionBox>
+    </section>
 
   )
 }
