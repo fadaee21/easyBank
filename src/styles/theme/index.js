@@ -101,6 +101,7 @@ const theme = createTheme({
       defaultProps: {
         disableElevation: true,
         disableRipple: true,
+        "aria-label":"button",
       },
       styleOverrides: {
         text: {
