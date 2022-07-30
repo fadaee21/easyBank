@@ -44,7 +44,6 @@ const Questioning = () => {
             )
           })}
         </InfoList>
-
       </QuestionBox>
     </section>
 

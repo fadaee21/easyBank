@@ -1,4 +1,4 @@
-import { Button, IconButton, ListItem } from "@mui/material";
+import { Button, Grid, IconButton, ListItem } from "@mui/material";
 import { styled } from "@mui/system";
 import { Colors } from "../theme";
 
@@ -29,4 +29,19 @@ export const ListItemCenter = styled(ListItem)(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "flex-start",
+}));
+
+export const GridButtonAndCopy = styled(Grid)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  [theme.breakpoints.up("sm")]: {
+    justifyContent: "center",
+    alignItems: "center", 
+  },
+  [theme.breakpoints.up("md")]: {
+    justifyContent: "center",
+    alignItems: "flex-end", 
+  },
 }));

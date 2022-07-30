@@ -3,7 +3,7 @@ import { Button, Grid, List, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import { Colors } from '../styles/theme'
 import { Facebook, Instagram, Pintrest, Twitter, Youtube, EasyBankLogo } from '../assets/allSVGicons'
-import { ButtonFooter, ButtonFooterIcon, ListItemCenter } from '../styles/footer/footer'
+import { ButtonFooter, ButtonFooterIcon, GridButtonAndCopy, ListItemCenter } from '../styles/footer/footer'
 
 
 
@@ -16,7 +16,7 @@ const Footer = () => {
     <footer>
       <Box sx={{ backgroundColor: Colors.DarkBlue, p: { sm: '2rem 8rem', xs: '2rem' }, color: Colors.White }} >
         <Grid container >
-          <Grid item sm={7} xs={12}  >
+          <Grid item md={7} sm={6} xs={12}  >
             <Grid container >
               <Grid item md={4} xs={12} sx={{ display: 'flex', justifyContent: 'center' }}>
                 <List>
@@ -75,12 +75,12 @@ const Footer = () => {
 
             </Grid>
           </Grid>
-          <Grid item sm={5} xs={12} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: { md: 'flex-end', xs: 'center' } }}>
+          <GridButtonAndCopy item md={5} sm={6} xs={12} >
             <Button variant='gradient' >request invite</Button>
             <Typography variant='caption' sx={{ mt: '1rem', fontSize: 14, textAlign: 'center' }}>
               &copy; Easybank.All Rights Reserved
             </Typography>
-          </Grid>
+          </GridButtonAndCopy>
         </Grid>
       </Box>
     </footer>

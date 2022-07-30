@@ -1,21 +1,19 @@
-import { Box, Button, Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import React from 'react'
 import { BGIntroDesktop, BGIntroMobile } from '../assets/allSVGicons'
 import { useTheme } from '@mui/material/styles'
 import { useMediaQuery } from '@mui/material'
 import image from '../assets/image-mockups.png'
-import { GridBanner, GridBannerItemsContent } from '../styles/banner/GridBanner'
-const Banner = () => {
+import { BgIntroBox, BgIntroGrid, GridBanner, GridBannerItemsContent, ImageBannerComponent } from '../styles/banner'
 
+const Banner = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down("sm"))
-
   return (
-
     <section>
       <GridBanner container  >
-        <GridBannerItemsContent item xs={12} sm={6} sx={{ height: { xs: 'fit-content', sm: 'inherit' } }}>
+        <GridBannerItemsContent item xs={12} sm={6} >
           <Container maxWidth='xs' >
             <Grid container rowSpacing={2} sx={{ textAlign: { xs: 'center', sm: 'left' } }}>
               <Grid item>
@@ -36,39 +34,16 @@ const Banner = () => {
             </Grid>
           </Container>
         </GridBannerItemsContent>
-
-
-        <Grid item xs={12} sm={6} sx={{
-          position: 'relative',
-          order: { xs: -1, sm: 1 },
-          height: { xs: '23rem', sm: '35rem' }
-        }}>
-          <Box sx={{
-            position: 'absolute',
-            top: { sm: '-275px', xs: '0' },
-            right: { md: '-550px', sm: '-600px', xs: 0 },
-            transform: { md: 'scale(0.9)', sm: 'scale(0.6)', xs: 'scale(1.1)' },
-            overflow: 'hidden',
-          }}>
+        <BgIntroGrid item xs={12} sm={6}>
+          <BgIntroBox >
             {matches ? <BGIntroMobile /> : <BGIntroDesktop />}
-          </Box>
-
-          <Box
+          </BgIntroBox>
+          <ImageBannerComponent
             component="img"
-            sx={{
-              position: 'absolute',
-              top: { sm: '-160px', xs: '-370px' },
-              right: { md: '-200px', sm: '-250px', xs: '-195px' },
-              transform: { md: 'scale(0.9)', sm: 'scale(0.6)', xs: 'scale(0.48)' },
-              zIndex: 5
-
-
-            }}
             alt="screen of mobile"
             src={image}
           />
-
-        </Grid>
+        </BgIntroGrid>
       </GridBanner>
 
     </section>
