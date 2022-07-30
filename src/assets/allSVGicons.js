@@ -67,7 +67,7 @@ export const EasyBankLogo = ({ color }) => {
     // <SvgIcon {...props}>
     <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
       <defs>
-        <linearGradient id="a" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
+        <linearGradient id="a3" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
           <stop offset="0%" stopColor="#33D35E" />
           <stop offset="100%" stopColor="#2AB6D9" />
         </linearGradient>
@@ -105,7 +105,7 @@ export const BGIntroDesktop = () => {
           <stop offset="100%" stopColor="#2AB6D9" />
         </linearGradient>
         <filter
-          id="a"
+          id="a1"
           width="104.9%"
           height="135.9%"
           x="-4.8%"
@@ -155,7 +155,7 @@ export const BGIntroMobile = () => {
           <stop offset="100%" stopColor="#2AB6D9" />
         </linearGradient>
         <filter
-          id="a"
+          id="a2"
           width="116.9%"
           height="158.7%"
           x="-10.8%"
