@@ -67,7 +67,7 @@ export const EasyBankLogo = ({ color }) => {
     // <SvgIcon {...props}>
     <svg xmlns="http://www.w3.org/2000/svg" width="139" height="20">
       <defs>
-        <linearGradient id="a35" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
+        <linearGradient id="A2222" x1="72.195%" x2="17.503%" y1="0%" y2="100%">
           <stop offset="0%" stopColor="#33D35E" />
           <stop offset="100%" stopColor="#2AB6D9" />
         </linearGradient>
